@@ -106,6 +106,7 @@ Then execute the preprocessing script:
 
 ```bash
 python preprocessing.py
+```
 
 This will generate the `standardized_ride_data.csv` file.
 
@@ -117,6 +118,7 @@ Open the Jupyter Notebook:
 
 ```bash
 jupyter notebook TransportModeDetection.ipynb
+```
 
 Follow the steps inside the notebook to:
 
