@@ -23,7 +23,7 @@ Install required libraries using:
 
 ```bash
 pip install numpy pandas scipy scikit-learn matplotlib
-
+```
 
 ## Documentation
 ### Code
