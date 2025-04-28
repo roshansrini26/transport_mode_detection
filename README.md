@@ -128,13 +128,14 @@ Follow the steps inside the notebook to:
 
 
 ###Project Structure
+```unicode
 .
 ├── ride_data/                     # Folder containing raw ride data (.csv files)
 ├── standardized_ride_data.csv      # Output dataset after preprocessing
 ├── preprocessing.py                # Python script for data preprocessing
 ├── TransportModeDetection.ipynb    # Jupyter Notebook for model training and evaluation
 └── README.md                       # Project documentation
-
+```
 ## License
 This work is licensed under a MIT License.
 
