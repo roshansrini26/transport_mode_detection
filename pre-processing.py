@@ -24,7 +24,6 @@ def clean_data(df):
 
 # Module 3: Sensor Fusion (Simplified Complementary Filter)
 def compute_orientation(df):
-    #Estimate orientation (roll, pitch) using a complementary filter.
     # Initialize roll, pitch
     df['roll'] = 0.0
     df['pitch'] = 0.0
@@ -51,7 +50,6 @@ def compute_orientation(df):
         df.loc[i, 'roll'] = alpha * roll_gyro + (1 - alpha) * roll_acc
         df.loc[i, 'pitch'] = alpha * pitch_gyro + (1 - alpha) * pitch_acc
 
-    # Simulate game rotation vector and rotation vector as placeholders (simplified)
     df['game_rotation_vector'] = np.sqrt(df['roll']**2 + df['pitch']**2)
     df['rotation_vector'] = df['game_rotation_vector']  # Simplified, no magnetometer
     df['orientation'] = df['roll']  # Simplified, using roll as a proxy
@@ -61,7 +59,6 @@ def compute_orientation(df):
 # Module 4: Feature Engineering
 def calculate_statistics(df):
     """Calculate statistics for each sensor type per ride."""
-    # Compute magnitudes
     df['accel_magnitude'] = np.sqrt(df['acceleration_x']**2 + df['acceleration_y']**2 + df['acceleration_z']**2)
     df['gyro_magnitude'] = np.sqrt(df['gyro_x']**2 + df['gyro_y']**2 + df['gyro_z']**2)
 
